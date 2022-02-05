@@ -1,8 +1,9 @@
 body {
     text-align: center;
-    background:rgb(22, 3, 87);
+    background: linear-gradient(45deg, rgb(16, 1, 66), rgb(16, 1, 66), rgb(78, 30, 235));
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
+    float: center;
+    margin: auto;
 }
 
 h1 {
@@ -16,14 +17,10 @@ ul {
     overflow: hidden;
     background-color: rgb(22, 3, 87);
 
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 li {
     float: left;
- 
 }
 
 li a {
@@ -32,24 +29,97 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
 }
 
+.fillin {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 2vh;
+}
 
 li a:hover {
     background-color: #111;
 }
-h1{
-    color: white;
+
+h1 {
+    color: rgb(255, 255, 255);
 }
-.headd{
+
+.headd {
     min-height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(5, 6, 12, 0.7),rgba(5,6,12,0.7)), url(corwin.png);
+    background-image: linear-gradient(rgba(5, 6, 12, 0.7), rgba(5, 6, 12, 0.7)), url(corwin.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
     opacity: 0.9;
     text-align: center;
+}
+
+.form {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type=text] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=text]:hover {
+    width: 310px;
+    background-color: rgb(75, 73, 73);
+}
+
+input[type=text]:focus {
+    width: 310px;
+    background-color: rgb(75, 73, 73);
+}
+
+input[type=date] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=submit] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.contactform {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: #29286b;
+    text-align: center;
+    box-sizing: content-box;
+    border-radius: 10px;
+    margin: auto;
+    max-width: max-content;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(12, 12, 15);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #071381;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
