@@ -1,1 +1,1 @@
-.php = PHP
+*.php  linguist-language=PHP
