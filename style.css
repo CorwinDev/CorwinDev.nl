@@ -10,6 +10,11 @@ h1 {
     text-align: center;
 }
 
+.overmij{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #111;
+}
 ul {
     list-style-type: none;
     margin: 0;
