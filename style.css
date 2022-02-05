@@ -1,27 +1,24 @@
 body {
     text-align: center;
-    background: linear-gradient(45deg, rgb(16, 1, 66), rgb(16, 1, 66), rgb(78, 30, 235));
+    background: rgb(16, 1, 66);
+    /*linear-gradient(45deg, rgb(16, 1, 66), rgb(16, 1, 66), rgb(78, 30, 235))*/
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     float: center;
     margin: auto;
+    align-items: center;
+    align-content: center;
 }
 
 h1 {
     text-align: center;
 }
 
-.overmij{
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px #111;
-}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgb(22, 3, 87);
-
 }
 
 li {
@@ -34,6 +31,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 3vh;
 }
 
 .fillin {
@@ -50,15 +48,19 @@ h1 {
 }
 
 .headd {
-    min-height: 50vh;
+    min-height: fit-content;
+    min-width: fit-content;
     width: 100%;
-    background-image: linear-gradient(rgba(5, 6, 12, 0.7), rgba(5, 6, 12, 0.7)), url(corwin.png);
+    background-image: url(corwin.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    border-radius: 20px;
     position: relative;
     opacity: 0.9;
     text-align: center;
+    margin: auto;
+    box-shadow: 2px 2px #111;
 }
 
 .form {
@@ -111,20 +113,192 @@ input[type=submit] {
     max-width: max-content;
 }
 
-::-webkit-scrollbar {
+.corwin {
+    text-shadow: 5px 5px #111;
+}
+
+ ::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track {
+ ::-webkit-scrollbar-track {
     background: rgb(12, 12, 15);
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
     background: #071381;
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+ ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.underdev {
+    color: rgb(78, 30, 235);
+}
+
+.corwin {
+    color: white;
+}
+
+.dev {
+    color: rgb(78, 30, 235)
+}
+
+
+/*overmij */
+
+.overmij {
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px #111;
+    background-color: rgb(22, 3, 87);
+    margin: auto;
+    border-radius: 20px;
+    width: 900px;
+}
+
+.overmijh1 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 5px 5px #111;
+}
+
+.overmijtext {
+    text-shadow: 2px 2px #111;
+    font-size: 20px;
+    color: rgb(78, 30, 235)
+}
+
+@media (min-width: 576px) {
+    body {
+        font-size: 20px;
+    }
+    .headd {
+        height: min-content;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 24px;
+    }
+    .headd {
+        height: min-content;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 34px;
+    }
+    .headd {
+        height: min-content;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 40px;
+    }
+    .headd {
+        height: fit-content;
+    }
+}
+
+
+/* waves */
+
+.ocean {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    bottom: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+    bottom: 0;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient( -225deg, #e06716 0%, #e06716 29%, #0004fc 67%, #e06716 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 100px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.word {
+    margin: auto;
+    color: rgb(78, 30, 235);
+    font: 700 normal 2.5em 'tahoma';
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+    height: 100px;
+}
+
+
+/*languages*/
+
+.languagesiu {
+    text-shadow: 2px 2px #111;
+}
+
+.languages {
+    text-shadow: 2px 2px #111;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px #111;
+    background-color: rgb(22, 3, 87);
+    margin: auto;
+    border-radius: 20px;
+    width: 900px;
 }
