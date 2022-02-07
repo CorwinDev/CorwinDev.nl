@@ -1,6 +1,7 @@
 <?php
-if (!$_GET["language"] || $_GET["language"] === "en") {
+if (!$_GET) {
 ?>
+
 
     <head>
         <link rel="stylesheet" href="style.css">
@@ -52,15 +53,25 @@ if (!$_GET["language"] || $_GET["language"] === "en") {
                 wordflick();
             });
         </script>
+        <script>
+            var doalert = function() {
+                url = window.location.href + "?language=nl"
+                console.log(url)
+                window.location.href = url
+            }
+        </script>
     </head>
 
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/projects.php">Projects</a></li>
+        <!-- window.location.href-->
+        <div class="sliderr">
+            <button class="button" onclick="doalert()">Switch to Dutch!</button>
+        </div>
 
     </ul>
-
 
     <body>
         <br>
@@ -154,16 +165,24 @@ if (!$_GET["language"] || $_GET["language"] === "en") {
                 wordflick();
             });
         </script>
+        <script>
+            var doalert = function() {
+                url = window.location.href
+                 url = url.split( '?' );
+
+                window.location.href = url[0]
+            }
+        </script>
     </head>
 
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/projects.php">Projects</a></li>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
+        <div class="sliderr">
+            <button class="button" onclick="doalert()">Switch to Dutch!</button>
+        </div>
+
     </ul>
 
 
