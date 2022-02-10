@@ -7,13 +7,14 @@ include "../includes/connection.inc.php";
 
 if ($_SESSION) {
     echo "<p>You are already logged in!</p>";
+    header("Location: /CorwinDev.nl/panel/client"); /* Redirect browser */
+
 
 
 } else {
     if (isset($_POST['username'])) {
         $sql1 = "SELECT * FROM users WHERE username= '$_POST[username]'";
         $result1 = mysqli_query($database, $sql1);
-        $matchFound = mysqli_num_rows($result1) > 0 ? 'yes' : 'no';
 
         if ($result1->num_rows == 0) {
             echo "Wrong credentials!";
@@ -26,6 +27,8 @@ if ($_SESSION) {
             if($row){
                 echo "You are logged in!";
                 $_SESSION["users"] = $_POST["username"];
+                header("Location: /CorwinDev.nl/panel/client"); /* Redirect browser */
+
                 die();
             }else{
                 echo "Wrong credentials!";
@@ -35,6 +38,7 @@ if ($_SESSION) {
     };
 
 ?>
+<h1>Login:</h1>
     <form action="" method="post">
         <input type="text" name="username" placeholder="Username..." required>
         <br>
@@ -42,6 +46,7 @@ if ($_SESSION) {
         <br>
         <input type="Submit" name="Save">
     </form>
+<p>Register: <a href="/CorwinDev.nl/panel/register.php" class="redirect">Click here</a></p>
 <?php
 }
 ?>

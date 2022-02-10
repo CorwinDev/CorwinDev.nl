@@ -94,6 +94,14 @@ input[type=date] {
     border-radius: 10px;
 }
 
+input[type=password] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
 input[type=submit] {
     width: 300px;
     padding: 12px 20px;
@@ -330,4 +338,7 @@ input[type=submit] {
   .button:hover {
     background-color: #4CAF50;
     color: rgb(0, 0, 0);
+  }
+  h5{
+      color: white;
   }
