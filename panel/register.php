@@ -30,7 +30,7 @@ if (isset($_POST['username'])) {
 <div class='form'>
     <br>
     <form action="" method="post">
-        <input type="text" name="username" placeholder="Username..." required=true>
+        <input type="text" name="username" placeholder="Username..." required>
         <br>
         <input type="password" name="password" placeholder="Password..." required>
         <br>

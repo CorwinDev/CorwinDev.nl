@@ -102,6 +102,14 @@ input[type=password] {
     border-radius: 10px;
 }
 
+input[type=select] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
 input[type=submit] {
     width: 300px;
     padding: 12px 20px;
@@ -145,9 +153,8 @@ input[type=submit] {
 
 .underdev {
     color: rgb(78, 30, 235);
-   /* text-shadow: 2px 2px 5px #111;*/
+    /* text-shadow: 2px 2px 5px #111;*/
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-
 }
 
 .corwin {
@@ -314,13 +321,11 @@ input[type=submit] {
     width: 900px;
 }
 
-
-
-
 .sliderr {
     margin-top: 0px;
     text-align: end;
 }
+
 .button {
     border: none;
     color: rgb(29, 21, 21);
@@ -333,12 +338,34 @@ input[type=submit] {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 10px;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #4CAF50;
     color: rgb(0, 0, 0);
-  }
-  h5{
-      color: white;
-  }
+}
+
+h5 {
+    color: white;
+}
+
+select {
+    padding: 0 1em 0 0;
+    margin: 0;
+    border-radius: 10px;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    color:rgb(0, 0, 0);
+    background-color: rgb(242, 239, 255);
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.custom-select {
+    margin: auto;
+    color: white
+}
