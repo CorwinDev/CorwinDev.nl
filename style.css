@@ -190,12 +190,49 @@ input[type=submit] {
     color: rgb(78, 30, 235)
 }
 
+.column {
+    float: left;
+    width: 50%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    display: flex;
+    color:rgb(18, 3, 187);
+}
+
+.column {
+    flex: 50%;
+}
+
+.under{
+    color: rgba(255, 255, 255, 0.747);
+    font-size: 20px;
+}
+
+.href{
+    font-size: 15px;
+}
+
 @media (min-width: 576px) {
+    .column {
+        width: 100%;
+    }
     body {
         font-size: 20px;
     }
     .headd {
         height: min-content;
+        width: 100%;
+        font-size: 20px;
     }
 }
 
@@ -205,6 +242,8 @@ input[type=submit] {
     }
     .headd {
         height: min-content;
+        width: 100%;
+        font-size: 24px;
     }
 }
 
@@ -214,6 +253,8 @@ input[type=submit] {
     }
     .headd {
         height: min-content;
+        width: 100%;
+        font-size: 34px;
     }
 }
 
@@ -223,6 +264,19 @@ input[type=submit] {
     }
     .headd {
         height: fit-content;
+        width: 100%;
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1700px) {
+    body {
+        font-size: 40px;
+    }
+    .headd {
+        height: fit-content;
+        width: 100%;
+        font-size: 40px;
     }
 }
 
@@ -274,27 +328,6 @@ input[type=submit] {
     }
 }
 
-.animate-charcter {
-    text-transform: uppercase;
-    background-image: linear-gradient( -225deg, #e06716 0%, #e06716 29%, #0004fc 67%, #e06716 100%);
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    display: inline-block;
-    font-size: 100px;
-}
-
-@keyframes textclip {
-    to {
-        background-position: 200% center;
-    }
-}
-
 .word {
     margin: auto;
     color: rgb(78, 30, 235);
@@ -311,6 +344,17 @@ input[type=submit] {
 }
 
 .languages {
+    text-shadow: 2px 2px #111;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px #111;
+    background-color: rgb(22, 3, 87);
+    margin: auto;
+    border-radius: 20px;
+    width: 900px;
+}
+
+.projects {
     text-shadow: 2px 2px #111;
     text-align: center;
     color: white;
@@ -358,7 +402,7 @@ select {
     font-size: inherit;
     cursor: inherit;
     line-height: inherit;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     background-color: rgb(242, 239, 255);
     width: 300px;
     box-sizing: border-box;
@@ -368,4 +412,11 @@ select {
 .custom-select {
     margin: auto;
     color: white
+}
+
+footer {
+    border-radius: 20px;
+    background-color: rgb(9, 4, 59);
+    margin-bottom: -100px;
+    font-size: 35px;
 }

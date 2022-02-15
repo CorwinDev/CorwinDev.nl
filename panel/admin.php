@@ -14,8 +14,6 @@ include "../includes/checkforlogin.inc.php";
 if ($_POST) {
     $sql = "UPDATE users SET  projects='$_POST[projects]', project_download='$_POST[project_download]', project_price='$_POST[project_price]'  WHERE username='$_POST[user]'";
     $result = mysqli_query($database, $sql);
-
-    print_r($_POST);
 }
 if ($_SESSION['users'] !== "Corwin") {
     echo "You are not an admin!!";
