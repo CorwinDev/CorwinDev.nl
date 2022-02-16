@@ -2,7 +2,7 @@ body {
     text-align: center;
     background: rgb(16, 1, 66);
     /*linear-gradient(45deg, rgb(16, 1, 66), rgb(16, 1, 66), rgb(78, 30, 235))*/
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Consolas;
     float: center;
     margin: auto;
     align-items: center;
