@@ -1,9 +1,9 @@
 <?php
 require 'vendor/autoload.php';
-
+include "includes/connection.inc.php";
 $email = new \SendGrid\Mail\Mail();
 $email->setFrom("site@corwindev.nl", "CorwinDev Contact Form");
-$sendgrid = new \SendGrid();
+$sendgrid = new \SendGrid("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");
 
 if (isset($_POST['submit'])) {
     $email->setSubject("Get in touch form!");
@@ -29,10 +29,6 @@ if (isset($_POST['submit'])) {
     <li><a href="/contact.php">Contact</a></li>
     <li><a href="/projects.php">Projects</a></li>
 </ul>
-<br>
-<br>
-<br>
-<br><br>
 <div class="fillin">
 
 <h1>Fill in the contact from down here to get in touch with me!</h1>
@@ -49,4 +45,7 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
 </body>
+<footer>
+    
+</footer>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

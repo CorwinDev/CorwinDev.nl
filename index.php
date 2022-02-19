@@ -91,10 +91,7 @@
     <br>
     <div class="headd">
         <br>
-
         <h1 class="animate-charcter"> Corwin</h1>
-
-
         <p class="underdev">Developer in many languages!</p>
         <br>
         <div class="ocean">
@@ -103,7 +100,6 @@
             <div class="wave"></div>
             <div class="wave"></div>
             <div class="wave"></div>
-
         </div>
     </div>
     <br>

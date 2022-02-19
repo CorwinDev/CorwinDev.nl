@@ -1,15 +1,8 @@
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta property="og:title" content="CorwinDev" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://corwindev.nl" />
-    <meta property="og:image" content="https://corwindev.nl/logo.png" />
-    <meta property="og:description" content="Corwin Developer in many languages!" />
-    <meta name="theme-color" content="#0000ff">
     <script>
         function refreshFocus() {
             if (document.hasFocus() == false) {
@@ -47,9 +40,8 @@
 
 <body>
     <br>
-    <div class="languages" id="botscord">
-        <h1>I'm busy with this page! Hold on!</h1>
-    </div>
+<div class="languages">
+<h1>I'm busy with this page! Hold on!
+</div>
 </body>
-
 </html>
