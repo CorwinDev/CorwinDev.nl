@@ -2,8 +2,7 @@
 require './vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
+$configs = include './config.php';
 if ($_POST) {
   $name = $_POST['name'];
   $email = $_POST['email'];
@@ -152,13 +151,10 @@ if ($_POST) {
       </div>
     </div>
   </section>
-  <!-- Projects Section -->
   <section id="projects">
     <div class="user-details">
       <h1>Projecten</h1>
     </div>
-
-    <!-- User Project #1: Personal Résumé Website -->
     <div class="user-projects">
       <div class="images-right">
         <picture>
@@ -187,8 +183,7 @@ if ($_POST) {
     <div class="user-projects">
       <div class="images-left">
         <picture>
-          <source type="image/webp" srcset="./assets/img/webp/Perpetual-Crusdes.webp" alt="Discord bot" />
-          <img alt="Discord bot" src="./assets/img/jpg/Perpetual-Crusdes.jpg" />
+          <img alt="Discord bot" src="https://user-images.githubusercontent.com/88144943/167872917-f74615a8-0d28-48ab-88d9-6172e9f7270e.png" />
         </picture>
       </div>
       <div class="contents-right" style="text-align: center">
@@ -206,30 +201,6 @@ if ($_POST) {
         <a class="project-link" target="_blank" href="https://github.com/CorwinDev/Discord-Bot">Bekijk het!</a>
       </div>
     </div>
-    <!--
-    <div class="user-projects">
-      <div class="images-right">
-        <picture>
-          <source type="image/webp" srcset="./assets/img/webp/COVID19-Tracker-App.webp" alt="COVID-19 Tracker App" />
-          <img alt="COVID-19 Tracker App" src="./assets/img/jpg/COVID19-Tracker-App.jpg" />
-        </picture>
-      </div>
-      <div class="contents" style="text-align: center">
-        <h3>COVID-19 Tracker App</h3>
-        <div>
-          <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/javascript.svg" style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)" />
-        </div>
-        <p style="text-align: justify">
-          I created a web application for tracking the spread of COVID-19. Using Johns Hopkins University Center For
-          Systems Science and Engineering API, the website processes the COVID-19 data to create statistical
-          projections through graphs and charts.
-        </p>
-        <a class="project-link" target="_blank" href="https://www.adityavsingh.com/covid19-tracker-app">
-          Check it out!
-        </a>
-      </div>
-    </div>
-  -->
   </section>
 
   <section id="contact">
