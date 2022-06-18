@@ -13,7 +13,7 @@ if ($_POST) {
   $mail->Host = 'mail.corwindev.nl';
   $mail->SMTPAuth = true;
   $mail->Username = 'mail@corwindev.nl';
-  $mail->Password = 'b5zy-4chdeuF61oM';
+  $mail->Password = $configs['ww'];
   $mail->SMTPSecure = 'tls';
   $mail->Port = 587;
   $mail->setFrom('CorwinDev.nl <mail@corwindev.nl>');
