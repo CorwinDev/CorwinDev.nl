@@ -1,4 +1,6 @@
 <?php
+$line = date('Y-m-d H:i:s') . " - $_SERVER[REMOTE_ADDR]";
+file_put_contents('visitors.log', $line . PHP_EOL, FILE_APPEND);
 require './vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -19,7 +21,9 @@ if ($_POST) {
   $mail->setFrom('CorwinDev.nl <mail@corwindev.nl>');
   $mail->addAddress('info@corwindev.nl');
   $mail->isHTML(true);
-  $mail->Subject = 'Message from Contact Demo';
+  $mail->Subject = 'Bericht van ' . $name;
+  $line = date('Y-m-d H:i:s') . " - $_SERVER[REMOTE_ADDR]";
+
   $mail->Body = '
   <head>
   <style>
@@ -38,6 +42,7 @@ if ($_POST) {
   <p>Name: ' . $name . '</p>
   <p>Email: ' . $email . '</p>
   <p>Message: ' . $message . '</p>
+  <p>IP: ' . $line . '</p>
   </body>';
   if (!$mail->send()) {
     $result = '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
@@ -217,10 +222,10 @@ if ($_POST) {
       <div class="contents" style="text-align: center">
         <form action="" method="post">
           <ul class="form-style-1">
-            <li><label>Naam: <span class="required">*</span><input type="text" name="name" class="field-long" placeholder="Last" /></li>
+            <li><label>Naam: <span class="required">*</span><input type="text" name="name" class="field-long" placeholder="Volledige naam" /></li>
             <li>
               <label>Email <span class="required">*</span></label>
-              <input type="email" name="email" class="field-long" />
+              <input type="email" name="email" class="field-long" placeholder="E-mail"/>
             </li>
             <li>
               <label>Onderwerp</label>
