@@ -203,7 +203,7 @@ if ($_POST) {
           Discord.js framework. Deze bot heeft meer dan 100 functies. U kunt deze bot gebruiken om de server te
           beheren, games te spelen, etc.
         </p>
-        <a class="project-link" target="_blank" href="https://github.com/CorwinDev/Discord-Bot">Bekijk het!</a>
+        <a class="project-link" target="_blank" href="https://github.com/CorwinDev/Corwin-Bot">Bekijk het!</a>
       </div>
     </div>
   </section>
