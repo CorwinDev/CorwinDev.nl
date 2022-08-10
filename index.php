@@ -4,6 +4,7 @@ file_put_contents('visitors.log', $line . PHP_EOL, FILE_APPEND);
 require './vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
+
 $configs = include './config.php';
 if ($_POST) {
   $name = $_POST['name'];
@@ -64,6 +65,25 @@ if ($_POST) {
   <meta name="author" content="Corwin van Velthuizen" />
   <meta name="keywords" content="Corwin van Velthuizen, CorwinDev, Corwin, CoreFire, Corwin Developer" />
   <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+  <meta name="theme-color" content="#FF0000" id="test">
+  <meta name="author" content="BotsCord">
+  <meta name="robots" content="index, follow">
+  <script>
+    const hack = document.getElementById('test');
+    // rainbow mode
+    const rainbow = () => {
+      const colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#00FFFF', '#0000FF', '#7F00FF', '#FF00FF'];
+      let i = 0;
+      setInterval(() => {
+        hack.setAttribute('content', colors[i]);
+        i++;
+        if (i === colors.length) {
+          i = 0;
+        }
+      }, 100);
+    }
+    rainbow();
+  </script>
   <title>Corwin van Velthuizen</title>
   <link rel="stylesheet" href="./assets/css/main.css?<? time() ?>" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GK5TDSP78L"></script>
@@ -225,7 +245,7 @@ if ($_POST) {
             <li><label>Naam: <span class="required">*</span><input type="text" name="name" class="field-long" placeholder="Volledige naam" /></li>
             <li>
               <label>Email <span class="required">*</span></label>
-              <input type="email" name="email" class="field-long" placeholder="E-mail"/>
+              <input type="email" name="email" class="field-long" placeholder="E-mail" />
             </li>
             <li>
               <label>Onderwerp</label>
